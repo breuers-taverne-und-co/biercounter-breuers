@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biercounter – Breuers Taverne & Co.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loginScreen">
+        <h1>Biercounter – Breuers Taverne & Co.</h1>
+        <input type="text" id="username" placeholder="Dein Name">
+        <button onclick="login()">Los geht's!</button>
+    </div>
+
+    <div id="locationScreen" style="display:none;">
+        <h2>Standort auswählen</h2>
+        <div id="locations"></div>
+    </div>
+
+    <div id="counterScreen" style="display:none;">
+        <h2 id="locationName"></h2>
+        <h3>Willkommen, <span id="userNameDisplay"></span></h3>
+        <div id="counters">
+            <button onclick="decrement()">-</button>
+            <span id="userCount">0</span>
+            <button onclick="increment()">+</button>
+        </div>
+        <p>Gesamt an diesem Standort: <span id="locationTotal">0</span></p>
+        <p>Global gesamt: <span id="globalTotal">0</span></p>
+        <button onclick="changeLocation()">Anderer Standort</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
